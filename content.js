@@ -1,0 +1,15 @@
+export const profile = {
+  name: '张琳萱', english: 'LINXUAN ZHANG', email: 'limo1732849772@163.com',
+  intro: '把复杂的问题，变成清晰可用的产品。',
+  bio: '香港城市大学计算机科学与技术硕士在读，本科毕业于南京农业大学电子商务专业。从 AI Agent 到电商运营中台，我关注需求背后的真实场景，也通过亲手制作，把产品想法变成可以体验的作品。',
+  experiences: [
+    {company:'安克创新',summary:'参与电商中台升级与 SaaS 选型，负责库存健康度、供应链进销存等 BI 模块的需求分析与功能设计。',role:'产品运营实习生',date:'2026.08 — 至今',tags:'电商中台 / BI 产品 / 渠道',text:'参与全渠道电商中台升级与 SaaS 选型，梳理库存、订单及退款流程问题；负责库存健康度监控、供应链进销存等模块的需求分析、功能设计与迭代。'},
+    {company:'CSDN 创新乐知',summary:'参与 AI Agent 定时任务与会议纪要产品设计，通过 Python 验证模型与实时转写方案，协同研发推进交付。',role:'AI 产品经理实习生',date:'2026.06 — 2026.08',tags:'AI Agent / 产品交付 / AI 硬件',text:'参与 LongWork 定时任务与 AI 会议纪要模块的需求分析及迭代；通过 Python 脚本验证实时转写与模型 API 方案，协同研发推进设计、测试与交付。'}
+  ],
+  projects: [
+    {id:'insightflow',descriptionTitle:'用户反馈洞察与需求管理工具',actionLabel:'体验 InsightFlow',note:'演示使用合成反馈；浏览器本地存储，真实 AI 分析有额度限制。',category:'AI 产品 · 需求管理',name:'InsightFlow',subtitle:'让用户反馈，走向产品决策。',summary:'面向软件产品经理与独立开发者的反馈洞察与需求管理平台，将零散反馈组织成可审核、可追溯的需求。',tags:['产品流程设计','AI + 人工审核','可交互演示'],url:'https://viorchas.github.io/insightflow/',repo:'https://github.com/Viorchas/insightflow',details:[['问题与场景','反馈散落在不同来源，整理主题、判断需求与追溯证据容易脱节。项目围绕从原始反馈到需求跟进的完整流程展开。'],['核心流程','CSV 导入与字段映射 → AI 主题归类 → 人工复核 → 洞察统计 → 需求管理，保留需求与来源反馈的关联。'],['设计取舍','AI 结果先进入审核；支持校验、去重及备份恢复。公开演示使用浏览器存储，真实分析通过限额接口提供。'],['演示边界','预置 204 条合成反馈、6 个主题，分析对象为虚构产品 chatagent。数据不代表真实用户研究或业务业绩；完整服务端与跨设备同步尚未实现。']]},
+    {id:'wandeng',descriptionTitle:'校园悬疑 · 网页 ARG 游戏',actionLabel:'试玩晚灯社',category:'创意实验 · HTML ARG',name:'晚灯社',subtitle:'一张普通网页，一场隐藏的调查。',summary:'以校园社团网站为入口的轻量网页 ARG。通过关键词检索、隐藏页面与线索拼接，让浏览行为成为叙事的一部分。',tags:['交互叙事','线索与解锁','HTML / CSS / JavaScript'],url:'https://viorchas.github.io/',repo:'https://github.com/Viorchas/Viorchas.github.io',details:[['体验设定','玩家进入一张看似普通的校园社团官网，在页面内容中寻找异常，并逐步拼接隐藏故事。'],['交互机制','关键词搜索推动页面解锁，探索进度与徽章状态影响后续路径；通过本地存储保留探索状态。'],['叙事反馈','分层页面、视觉氛围变化与三种结局，将调查行为与故事反馈连接起来。展示页保留悬念，具体线索请在游戏中探索。'],['项目形态','单文件 HTML 网页作品，可直接在浏览器体验。以交互机制与叙事实验为展示重点。']]}
+  ]
+};
+// 游戏从站点根目录迁移至独立项目路径，保留原游戏内容与存档键。
+profile.projects.find(project => project.id === 'wandeng').url = 'https://viorchas.github.io/wandeng/';
